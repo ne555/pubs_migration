@@ -1,12 +1,12 @@
 /*                                                                        */
-/*              InstPubs.SQL - Creates the Pubs database                  */ 
+/*              InstPubs.SQL - Creates the Pubs database                  */
 /*                                                                        */
 /*
 ** Copyright Microsoft, Inc. 1994 - 2000
 ** All Rights Reserved.
 */
 
-/* For SQLite, Bedrij Aldo */
+/* For postgresql, Bedrij Aldo */
 
 
 CREATE TABLE authors
@@ -46,29 +46,29 @@ CREATE TABLE publishers
          DEFAULT('USA')
 );
 
-CREATE TABLE titles
+create TABLE titles
 (
-   title_id       varchar(6) not NULL
-
-         PRIMARY KEY,
+   title_id       varchar(6)
+	CONSTRAINT UPKCL_titleidind PRIMARY KEY,
 
    title          varchar(80)       NOT NULL,
-
    type           char(12)          NOT NULL
-
          DEFAULT ('UNDECIDED'),
 
    pub_id         char(4)               NULL
          REFERENCES publishers(pub_id),
-   price          money                 NULL,
-   advance        money                 NULL,
+
+   price          decimal		NULL,
+   advance        decimal                 NULL,
    royalty        int                   NULL,
    ytd_sales      int                   NULL,
    notes          varchar(200)          NULL,
 
-   pubdate        datetime          NOT NULL
-         DEFAULT (date('now'))
+   pubdate        date          NOT NULL
+	default ('01/01/1900')
 );
+-- hate yankeeland and its stupid convention
+set datestyle = MDY;
 
 CREATE TABLE titleauthor
 (
@@ -80,7 +80,7 @@ CREATE TABLE titleauthor
 
          REFERENCES titles(title_id),
 
-   au_ord         tinyint               NULL,
+   au_ord         smallint               NULL,
    royaltyper     int                   NULL,
 
 
@@ -99,7 +99,6 @@ CREATE TABLE stores
    zip            char(5)               NULL
 );
 
-
 CREATE TABLE sales
 (
    stor_id        char(4)           NOT NULL
@@ -107,7 +106,7 @@ CREATE TABLE sales
          REFERENCES stores(stor_id),
 
    ord_num        varchar(20)       NOT NULL,
-   ord_date       datetime          NOT NULL,
+   ord_date       date          NOT NULL,
    qty            smallint          NOT NULL,
    payterms       varchar(12)       NOT NULL,
 
@@ -145,16 +144,16 @@ CREATE TABLE discounts
 
 CREATE TABLE jobs
 (
-   job_id         integer          
+   job_id         integer
          PRIMARY KEY,
 
    job_desc       varchar(50)       NOT NULL
          DEFAULT 'New Position - title not formalized yet',
 
-   min_lvl        tinyint           NOT NULL
+   min_lvl        smallint           NOT NULL
          CHECK (min_lvl >= 10),
 
-   max_lvl        tinyint           NOT NULL
+   max_lvl        smallint           NOT NULL
          CHECK (max_lvl <= 250)
 );
 
@@ -164,13 +163,13 @@ CREATE TABLE pub_info
          REFERENCES publishers(pub_id)
          PRIMARY KEY,
 
-   logo           image                 NULL,
+   logo           text                 NULL,
    pr_info        text                  NULL
 );
 
 CREATE TABLE employee
 (
-   emp_id         empid
+   emp_id         char(9) NOT NULL
          PRIMARY KEY
          CONSTRAINT CK_emp_id CHECK (emp_id LIKE
             '_________' or
@@ -184,14 +183,14 @@ CREATE TABLE employee
          DEFAULT 1
          REFERENCES jobs(job_id),
 
-   job_lvl        tinyint
+   job_lvl        smallint
          DEFAULT 10,
 
    pub_id         char(4)           NOT NULL
          DEFAULT ('9952')
          REFERENCES publishers(pub_id),
 
-   hire_date      datetime          NOT NULL
+   hire_date      date          NOT NULL
          DEFAULT (date('now'))
 );
 
