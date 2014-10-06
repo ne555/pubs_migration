@@ -6,7 +6,7 @@
 ** All Rights Reserved.
 */
 
-/* For SQLite, Bedrij Aldo */
+/* For postgresql, Bedrij Aldo */
 
 
 CREATE TABLE authors
@@ -67,6 +67,7 @@ create TABLE titles
    pubdate        date          NOT NULL
 	default ('1900/01/01')
 );
+set datestyle = YMD;
 
 CREATE TABLE titleauthor
 (
