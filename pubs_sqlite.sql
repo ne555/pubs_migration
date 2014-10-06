@@ -623,3 +623,41 @@ from authors, titles, titleauthor
 where authors.au_id = titleauthor.au_id
    AND titles.title_id = titleauthor.title_id;
 
+CREATE TRIGGER employee_insert
+	before insert on employee for each row
+	begin
+		select
+			(case
+			when new.job_id = 1 and new.job_lvl <> 10 then raise(rollback, 'Job id 1 expects level 10')
+			end);
+		select
+			(case
+			when not new.job_lvl between j.min_lvl and j.max_lvl
+				then raise(rollback, 'The level is out of range')
+			end) from jobs j
+			where j.job_id = new.job_id;
+	end;
+
+CREATE TRIGGER employee_update
+	before update on employee for each row
+	begin
+		select
+			(case
+			when new.job_id = 1 and new.job_lvl <> 10 then raise(rollback, 'Job id 1 expects level 10')
+			end);
+		select
+			(case
+			when not new.job_lvl between j.min_lvl and j.max_lvl
+				then raise(rollback, 'The level is out of range')
+			end) from jobs j
+			where j.job_id = new.job_id;
+	end;
+
+CREATE TRIGGER employee_no_job
+	before insert on employee for each row
+	begin
+		select raise(rollback, 'No such job')
+			where not exists
+				(select j.job_id from jobs j
+					where j.job_id = new.job_id);
+	end;
