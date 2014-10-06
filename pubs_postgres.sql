@@ -624,3 +624,49 @@ from authors, titles, titleauthor
 where authors.au_id = titleauthor.au_id
    AND titles.title_id = titleauthor.title_id;
 
+
+CREATE FUNCTION raise_exception(text)
+RETURNS void AS $$
+BEGIN
+  RAISE EXCEPTION '%', $1;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE FUNCTION check_emp_job_level() RETURNS TRIGGER AS $$
+	BEGIN
+		if new.job_id = 1 and new.job_lvl <> 10 then
+			raise exception 'Job id 1 expects level 10';
+		end if;
+
+		if (select count(1) from jobs j where
+			j.job_id = new.job_id and
+			new.job_lvl between j.min_lvl and j.max_lvl ) = 0 then
+				raise exception 'The level is out of range';
+		end if;
+
+		return new;
+	END;
+$$ LANGUAGE plpgsql;
+
+CREATE FUNCTION check_job_exists() RETURNS TRIGGER AS $$
+	BEGIN
+		if (select count(1) from jobs j where
+			j.job_id = new.job_id) = 0 then
+				raise exception 'No such job';
+		end if;
+
+		return new;
+	END;
+$$ LANGUAGE PLPGSQL;
+
+CREATE TRIGGER employee_insert
+	before insert on employee for each row
+	execute procedure check_emp_job_level();
+
+CREATE TRIGGER employee_update
+	before update on employee for each row
+	execute procedure check_emp_job_level();
+
+CREATE TRIGGER employee_no_job
+	before insert on employee for each row
+	execute procedure check_job_exists();
