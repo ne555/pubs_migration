@@ -144,7 +144,7 @@ CREATE TABLE discounts
 
 CREATE TABLE jobs
 (
-   job_id         integer
+   job_id         SERIAL
          PRIMARY KEY,
 
    job_desc       varchar(50)       NOT NULL
@@ -196,73 +196,73 @@ CREATE TABLE employee
 
 insert into authors
    values('409-56-7008', 'Bennet', 'Abraham', '415 658-9932',
-   '6223 Bateman St.', 'Berkeley', 'CA', '94705', 1);
+   '6223 Bateman St.', 'Berkeley', 'CA', '94705', '1');
 insert into authors
    values('213-46-8915', 'Green', 'Marjorie', '415 986-7020',
-   '309 63rd St. #411', 'Oakland', 'CA', '94618', 1);
+   '309 63rd St. #411', 'Oakland', 'CA', '94618', '1');
 insert into authors
    values('238-95-7766', 'Carson', 'Cheryl', '415 548-7723',
-   '589 Darwin Ln.', 'Berkeley', 'CA', '94705', 1);
+   '589 Darwin Ln.', 'Berkeley', 'CA', '94705', '1');
 insert into authors
    values('998-72-3567', 'Ringer', 'Albert', '801 826-0752',
-   '67 Seventh Av.', 'Salt Lake City', 'UT', '84152', 1);
+   '67 Seventh Av.', 'Salt Lake City', 'UT', '84152', '1');
 insert into authors
    values('899-46-2035', 'Ringer', 'Anne', '801 826-0752',
-   '67 Seventh Av.', 'Salt Lake City', 'UT', '84152', 1);
+   '67 Seventh Av.', 'Salt Lake City', 'UT', '84152', '1');
 insert into authors
    values('722-51-5454', 'DeFrance', 'Michel', '219 547-9982',
-   '3 Balding Pl.', 'Gary', 'IN', '46403', 1);
+   '3 Balding Pl.', 'Gary', 'IN', '46403', '1');
 insert into authors
    values('807-91-6654', 'Panteley', 'Sylvia', '301 946-8853',
-   '1956 Arlington Pl.', 'Rockville', 'MD', '20853', 1);
+   '1956 Arlington Pl.', 'Rockville', 'MD', '20853', '1');
 insert into authors
    values('893-72-1158', 'McBadden', 'Heather',
-   '707 448-4982', '301 Putnam', 'Vacaville', 'CA', '95688', 0);
+   '707 448-4982', '301 Putnam', 'Vacaville', 'CA', '95688', '0');
 insert into authors
    values('724-08-9931', 'Stringer', 'Dirk', '415 843-2991',
-   '5420 Telegraph Av.', 'Oakland', 'CA', '94609', 0);
+   '5420 Telegraph Av.', 'Oakland', 'CA', '94609', '0');
 insert into authors
    values('274-80-9391', 'Straight', 'Dean', '415 834-2919',
-   '5420 College Av.', 'Oakland', 'CA', '94609', 1);
+   '5420 College Av.', 'Oakland', 'CA', '94609', '1');
 insert into authors
    values('756-30-7391', 'Karsen', 'Livia', '415 534-9219',
-   '5720 McAuley St.', 'Oakland', 'CA', '94609', 1);
+   '5720 McAuley St.', 'Oakland', 'CA', '94609', '1');
 insert into authors
    values('724-80-9391', 'MacFeather', 'Stearns', '415 354-7128',
-   '44 Upland Hts.', 'Oakland', 'CA', '94612', 1);
+   '44 Upland Hts.', 'Oakland', 'CA', '94612', '1');
 insert into authors
    values('427-17-2319', 'Dull', 'Ann', '415 836-7128',
-   '3410 Blonde St.', 'Palo Alto', 'CA', '94301', 1);
+   '3410 Blonde St.', 'Palo Alto', 'CA', '94301', '1');
 insert into authors
    values('672-71-3249', 'Yokomoto', 'Akiko', '415 935-4228',
-   '3 Silver Ct.', 'Walnut Creek', 'CA', '94595', 1);
+   '3 Silver Ct.', 'Walnut Creek', 'CA', '94595', '1');
 insert into authors
    values('267-41-2394', 'O''Leary', 'Michael', '408 286-2428',
-   '22 Cleveland Av. #14', 'San Jose', 'CA', '95128', 1);
+   '22 Cleveland Av. #14', 'San Jose', 'CA', '95128', '1');
 insert into authors
    values('472-27-2349', 'Gringlesby', 'Burt', '707 938-6445',
-   'PO Box 792', 'Covelo', 'CA', '95428', 3);
+   'PO Box 792', 'Covelo', 'CA', '95428', '1');
 insert into authors
    values('527-72-3246', 'Greene', 'Morningstar', '615 297-2723',
-   '22 Graybar House Rd.', 'Nashville', 'TN', '37215', 0);
+   '22 Graybar House Rd.', 'Nashville', 'TN', '37215', '0');
 insert into authors
    values('172-32-1176', 'White', 'Johnson', '408 496-7223',
-   '10932 Bigge Rd.', 'Menlo Park', 'CA', '94025', 1);
+   '10932 Bigge Rd.', 'Menlo Park', 'CA', '94025', '1');
 insert into authors
    values('712-45-1867', 'del Castillo', 'Innes', '615 996-8275',
-   '2286 Cram Pl. #86', 'Ann Arbor', 'MI', '48105', 1);
+   '2286 Cram Pl. #86', 'Ann Arbor', 'MI', '48105', '1');
 insert into authors
    values('846-92-7186', 'Hunter', 'Sheryl', '415 836-7128',
-   '3410 Blonde St.', 'Palo Alto', 'CA', '94301', 1);
+   '3410 Blonde St.', 'Palo Alto', 'CA', '94301', '1');
 insert into authors
    values('486-29-1786', 'Locksley', 'Charlene', '415 585-4620',
-   '18 Broadway Av.', 'San Francisco', 'CA', '94130', 1);
+   '18 Broadway Av.', 'San Francisco', 'CA', '94130', '1');
 insert into authors
    values('648-92-1872', 'Blotchet-Halls', 'Reginald', '503 745-6402',
-   '55 Hillsdale Bl.', 'Corvallis', 'OR', '97330', 1);
+   '55 Hillsdale Bl.', 'Corvallis', 'OR', '97330', '1');
 insert into authors
    values('341-22-1782', 'Smith', 'Meander', '913 843-0462',
-   '10 Mississippi Dr.', 'Lawrence', 'KS', '66044', 0);
+   '10 Mississippi Dr.', 'Lawrence', 'KS', '66044', '0');
 
 insert into publishers values('0736', 'New Moon Books', 'Boston', 'MA', 'USA');
 insert into publishers values('0877', 'Binnet & Hardley', 'Washington', 'DC', 'USA');
@@ -270,7 +270,7 @@ insert into publishers values('1389', 'Algodata Infosystems', 'Berkeley', 'CA', 
 insert into publishers values('9952', 'Scootney Books', 'New York', 'NY', 'USA');
 insert into publishers values('1622', 'Five Lakes Publishing', 'Chicago', 'IL', 'USA');
 insert into publishers values('1756', 'Ramona Publishers', 'Dallas', 'TX', 'USA');
-insert into publishers values('9901', 'GGG&G', 'MÅnchen', NULL, 'Germany');
+insert into publishers values('9901', 'GGG&G', 'M√ºnchen', NULL, 'Germany');
 insert into publishers values('9999', 'Lucerne Publishing', 'Paris', NULL, 'France');
 
 insert into pub_info values('0736', '0x474946383961D3001F00B30F00000000800000008000808000000080800080008080808080C0C0C0FF000000FF00FFFF000000FFFF00FF00FFFFFFFFFF21F9040100000F002C00000000D3001F004004FFF0C949ABBD38EBCDBBFF60288E245001686792236ABAB03BC5B055B3F843D3B99DE2AB532A36FB15253B19E5A6231A934CA18CB75C1191D69BF62AAD467F5CF036D8243791369F516ADEF9304AF8F30A3563D7E54CFC04BF24377B5D697E6451333D8821757F898D8E8F1F76657877907259755E5493962081798D9F8A846D9B4A929385A7A5458CA0777362ACAF585E6C6A84AD429555BAA9A471A89D8E8BA2C3C7C82DC9C8AECBCECF1EC2D09143A66E80D3D9BC2C41D76AD28FB2CD509ADAA9AAC62594A3DF81C65FE0BDB5B0CDF4E276DEF6DD78EF6B86FA6C82C5A2648A54AB6AAAE4C1027864DE392E3AF4582BF582DFC07D9244ADA2480BD4C6767BFF32AE0BF3EF603B3907490A4427CE21A7330A6D0584B810664D7F383FA25932488FB96D0F37BDF9491448D1A348937A52CAB4A9D3784EF5E58B4A5545D54BC568FABC9A68DD526ED0A6B8AA17331BD91E5AD9D1D390CED23D88F54A3ACB0A955ADDAD9A50B50D87296E3EB9C76A7CDAABC86B2460040DF34D3995515AB9FF125F1AFA0DAB20A0972382CCB9F9E5AEBC368B21EEDB66EDA15F1347BE2DFDEBB44A7B7C6889240D9473EB73322F4E8D8DBBE14D960B6519BCE5724BB95789350E97EA4BF3718CDD64068D751A261D8B1539D6DCDE3C37F68E1FB58E5DCED8A44477537049852EFD253CEE38C973B7E9D97A488C2979FB936FBAFF2CF5CB79E35830400C31860F4A9BE925D4439F81B6A073BEF1575F593C01A25B26127255D45D4A45B65B851A36C56154678568A20E1100003B',
@@ -297,7 +297,7 @@ insert into pub_info values('1756', '0x474946383961E3002500B30F00000000800000008
 'This is sample text data for Ramona Publishers, publisher 1756 in the pubs database. Ramona Publishers is located in Dallas, Texas.');
 
 insert into pub_info values('9901', '0x4749463839615D002200B30F00000000800000008000808000000080800080008080808080C0C0C0FF000000FF00FFFF000000FFFF00FF00FFFFFFFFFF21F9040100000F002C000000005D0022004004FFF0C949ABBD38EBCDFB03DF078C249895A386AA68BB9E6E0ACE623ABD1BC9E9985DFFB89E8E366BED782C5332563ABA4245A6744AAD5AAF4D2276CBED5EA1D026C528B230CD38B2C92721D78CC4772526748F9F611EB28DE7AFE25E818283604A1E8788898A7385838E8F55856F6C2C1D86392F6B9730708D6C5477673758A3865E92627E94754E173697A6A975809368949BB2AE7B9A6865AA734F80A2A17DA576AA5BB667C290CDCE4379CFD2CE9ED3D6A7CCD7DAA4D9C79341C8B9DF5FC052A8DEBA9BB696767B9C7FD5B8BBF23EABB9706BCAE5F05AB7E6C4C7488DDAF7251BC062530EFE93638C5B3580ECD4951312C217C425E73E89D38709D79D810D393BD20A528CE0AA704AA2D4D3082E583C89BD2C2D720753E1C8922697D44CF6AE53BF6D4041750B4AD467C54548932A1D7374A9D3A789004400003B',
-'This is sample text data for GGG&G, publisher 9901 in the pubs database. GGG&G is located in M¸nchen, Germany.');
+'This is sample text data for GGG&G, publisher 9901 in the pubs database. GGG&G is located in M√ºnchen, Germany.');
 
 insert into pub_info values('9952', '0x47494638396107012800B30F00000000800000008000808000000080800080008080808080C0C0C0FF000000FF00FFFF000000FFFF00FF00FFFFFFFFFF21F9040100000F002C00000000070128004004FFF0C949ABBD38EBCDBBFF60288E6469660005AC2C7BB56D05A7D24C4F339E3F765FC716980C3824F28418E4D1A552DA8ACCA5517A7B526F275912690D2A9BD11D14AB8B8257E7E9776BDEE452C2279C47A5CBEDEF2B3C3FBF9FC85981821D7D76868588878A898C8B838F1C8D928E733890829399949B979D9E9FA074A1A3A4A5A6A7458F583E69803F53AF4C62AD5E6DB13B6B3DAEAC6EBA64B365B26BB7ABBEB5C07FB428BCC4C8C1CCC7BBB065637C7A9B7BBE8CDADBDA8B7C31D9E1D88E2FA89E9AE9E49AE7EDA48DA2EEF2F3F4F597AEF6F9FAFBFC805D6CD28C0164C64D18BE3AAD88D87AA5C1DBC07FD59CE54293F0E0882AC39ED9CA2886E3308FB3FF262EBC726D591823204F2E0C09A4A3B32CFEACBC24198D86C48FD3E208D43832E3C0671A2D89737167281AA333219AC048D061499A3C83BEC8090BD84E5A99DE808B730DE9516B727CE85AE7C122BF73EAD29255CB76ADDBB6EC549C8504F7AD5DB37343A98D97576EDDBF7CFB0AEE8457EF5D4E83132BAEB1B8B1E3C749204B9EACB830E5CB984DE1F339A4E1CC88C93CB7D989D72234D1D3A672FEF85055C483C80A06742ADB664F3563119E417D5A8F52DFB1512AEC5D82E9C8662A477FB19A72B6F2E714413F8D0654AA75A8C4C648FDBC346ACDCD5487AFC439BE8BC8E8AA7F6BD77D2B7DF4E6C5882E57DFBDE2F56AEE6D87DFB8BFE06BE7E8F1C6CBCE4D2DC15751803C5956567EFA1D47A041E5F1176183CC1D571D21C2850396565CF5B1D5571D8AC21D08E099A15E85269E87207B1736B31E6FE620324E582116F5215178C86763518A9068DF7FE8C9C6207DCD0104A47B6B717388901EFA27238E3482454E43BB61E8D388F7FD44DD32473E79D43A527633232561E6F86536660256891699D175989A6F1A020A9C75C9D5E68274C619D79D91B5C5189F7906CA67297129D88F9E881A3AA83E8AB623E85E8B0EDAE89C892216E9A584B80318A69C7E3269A7A046FA69A8A4B6094004003B',
 'This is sample text data for Scootney Books, publisher 9952 in the pubs database. Scootney Books is located in New York City, New York.');
@@ -428,7 +428,8 @@ insert into stores values('6380','Eric the Read Books','788 Catamaugus Ave.',
       'Seattle','WA','98056');
 insert into stores values('7896','Fricative Bookshop','89 Madison St.','Fremont','CA','90019');
 
-/*
+-- MM/DD/YY
+-- damn yankeeland
 insert into sales values('7066', 'QA7442.3', '09/13/94', 75, 'ON invoice','PS2091');
 insert into sales values('7067', 'D4482', '09/14/94', 10, 'Net 60','PS2091');
 insert into sales values('7131', 'N914008', '09/14/94', 20, 'Net 30','PS2091');
@@ -450,8 +451,9 @@ insert into sales values('7131','P3087a', '5/29/93', 25, 'Net 60', 'PS7777');
 insert into sales values('7067','P2121', '6/15/92', 40, 'Net 30', 'TC3218');
 insert into sales values('7067','P2121', '6/15/92', 20, 'Net 30', 'TC4203');
 insert into sales values('7067','P2121', '6/15/92', 20, 'Net 30', 'TC7777');
-*/
 
+
+/*
 -- YY/MM/DD
 insert into sales values('7066', 'QA7442.3', '94/09/13', 75, 'ON invoice','PS2091');
 insert into sales values('7067', 'D4482', '94/09/14', 10, 'Net 60','PS2091');
@@ -474,6 +476,7 @@ insert into sales values('7131','P3087a', '93/05/29', 25, 'Net 60', 'PS7777');
 insert into sales values('7067','P2121', '92/06/15', 40, 'Net 30', 'TC3218');
 insert into sales values('7067','P2121', '92/06/15', 20, 'Net 30', 'TC4203');
 insert into sales values('7067','P2121', '92/06/15', 20, 'Net 30', 'TC7777');
+*/
 
 
 insert into roysched values('BU1032', 0, 5000, 10);
@@ -575,20 +578,20 @@ insert into discounts values('Initial Customer', NULL, NULL, NULL, 10.5);
 insert into discounts values('Volume Discount', NULL, 100, 1000, 6.7);
 insert into discounts values('Customer Discount', '8042', NULL, NULL, 5.0);
 
-insert into jobs values (NULL, 'New Hire - Job not specified', 10, 10);
-insert into jobs values (NULL, 'Chief Executive Officer', 200, 250);
-insert into jobs values (NULL, 'Business Operations Manager', 175, 225);
-insert into jobs values (NULL, 'Chief Financial Officier', 175, 250);
-insert into jobs values (NULL, 'Publisher', 150, 250);
-insert into jobs values (NULL, 'Managing Editor', 140, 225);
-insert into jobs values (NULL, 'Marketing Manager', 120, 200);
-insert into jobs values (NULL, 'Public Relations Manager', 100, 175);
-insert into jobs values (NULL, 'Acquisitions Manager', 75, 175);
-insert into jobs values (NULL, 'Productions Manager', 75, 165);
-insert into jobs values (NULL, 'Operations Manager', 75, 150);
-insert into jobs values (NULL, 'Editor', 25, 100);
-insert into jobs values (NULL, 'Sales Representative', 25, 100);
-insert into jobs values (NULL, 'Designer', 25, 100);
+insert into jobs (job_desc, min_lvl, max_lvl) values ('New Hire - Job not specified', 10, 10);
+insert into jobs (job_desc, min_lvl, max_lvl) values ('Chief Executive Officer', 200, 250);
+insert into jobs (job_desc, min_lvl, max_lvl) values ('Business Operations Manager', 175, 225);
+insert into jobs (job_desc, min_lvl, max_lvl) values ('Chief Financial Officier', 175, 250);
+insert into jobs (job_desc, min_lvl, max_lvl) values ('Publisher', 150, 250);
+insert into jobs (job_desc, min_lvl, max_lvl) values ('Managing Editor', 140, 225);
+insert into jobs (job_desc, min_lvl, max_lvl) values ('Marketing Manager', 120, 200);
+insert into jobs (job_desc, min_lvl, max_lvl) values ('Public Relations Manager', 100, 175);
+insert into jobs (job_desc, min_lvl, max_lvl) values ('Acquisitions Manager', 75, 175);
+insert into jobs (job_desc, min_lvl, max_lvl) values ('Productions Manager', 75, 165);
+insert into jobs (job_desc, min_lvl, max_lvl) values ('Operations Manager', 75, 150);
+insert into jobs (job_desc, min_lvl, max_lvl) values ('Editor', 25, 100);
+insert into jobs (job_desc, min_lvl, max_lvl) values ('Sales Representative', 25, 100);
+insert into jobs (job_desc, min_lvl, max_lvl) values ('Designer', 25, 100);
 
 insert into employee values ('PTC11962M', 'Philip', 'T', 'Cramer', 2, 215, '9952', '11/11/89');
 insert into employee values ('AMD15433F', 'Ann', 'M', 'Devon', 3, 200, '9952', '07/16/91');
