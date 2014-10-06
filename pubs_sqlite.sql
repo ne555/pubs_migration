@@ -142,7 +142,7 @@ CREATE TABLE discounts
 
 CREATE TABLE jobs
 (
-   job_id         SERIAL
+   job_id         integer
          PRIMARY KEY,
 
    job_desc       varchar(50)       NOT NULL
